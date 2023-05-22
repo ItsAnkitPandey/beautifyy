@@ -8,7 +8,7 @@ const Contact = () => {
     <div className='container'>
     <Navbar />
     <div className="contact">
-            <form action="#" method="POST" id="contact_form">
+            <form  id="contact_form">
                 <h3>Contact Us! </h3>
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" placeholder="Email Id" name="email" required />

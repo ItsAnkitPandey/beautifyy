@@ -7,8 +7,8 @@ import Footer from './Footer'
 import { motion } from 'framer-motion'
 import TotalPrice from './TotalPrice'
 
-const Cart = () => {
-	const [item, setItem] = useState([]);
+const Cart = ({cart}) => {
+	// const [item, setItem] = useState([]);
 	return (
 		<div >
 			<Navbar />
@@ -20,7 +20,7 @@ const Cart = () => {
 					<h5 className="total">TOTAL</h5>
 				</div>
 				<div className="products">
-					{item.map((curItem) => {
+					{cart.map((curItem) => {
 						return <CartItem key={curItem.id} {...curItem}  />
 					})}
 				</div>
