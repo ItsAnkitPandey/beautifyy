@@ -6,9 +6,9 @@ import '../App.css'
 const Contact = () => {
   return (
     <div className='container'>
-    <Navbar />
+    {/* <Navbar /> */}
     <div className="contact">
-            <form  id="contact_form">
+            <form  id="contact_form" className='form'>
                 <h3>Contact Us! </h3>
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" placeholder="Email Id" name="email" required />
@@ -17,7 +17,6 @@ const Contact = () => {
                 <button type="submit">Send</button>
             </form>
         </div>
-        <Footer />
       
     </div>
   )

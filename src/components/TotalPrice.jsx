@@ -1,14 +1,15 @@
-import React,{useState} from 'react'
+import React from 'react'
 
 
-const TotalPrice = () => {
-    const [price,setPrice] = useState(0);
-    
+const TotalPrice = ({cart}) => {
+  const totalPrice = cart.reduce((total, item) => {
+    return total + item.price * item.inCart;
+  }, 0);
   return (
     
         <div className="grandTotalContainer">
 			<h4 className="grandTotalTitle">TOTAL</h4>
-			<h4 className="grandTotal">${price}</h4>
+			<h4 className="grandTotal">${totalPrice}</h4>
 		</div>
     
   )

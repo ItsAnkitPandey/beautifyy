@@ -1,11 +1,21 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { Navigate } from 'react-router';
 import Footer from './Footer'
-import Navbar from './Navbar'
-
+import { useNavigate } from 'react-router';
+import Popup from './Popup';
 const Login = () => {
+    const navigate = useNavigate();
+    const [login, setLogin] = useState(false);
+    const handleSubmit = ()=>{
+        setLogin(true);
+    }
+    if (login) {
+        navigate("/")
+    }
+    
     return (
         <div className='container'>
-         <Navbar />
+         {/* <Navbar /> */}
             <div className="Wrapper Login">
                 <div className="Container">
                     <div className="Col-Left">
@@ -19,7 +29,7 @@ const Login = () => {
                     <div className="Col-Right">
                         <div className="Login-Form">
                             <h2 className="login_title">Login</h2>
-                            <form Action="" id="login_form" >
+                            <form onSubmit={handleSubmit} id="login_form" className='form'>
                                 <p>
                                     <label>Username/Email<span>*</span></label>
                                     <input Type="Text" placeholder="Username Or Email" Required />
@@ -41,7 +51,6 @@ const Login = () => {
 
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

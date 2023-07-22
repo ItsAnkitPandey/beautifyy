@@ -26,6 +26,7 @@ body::-webkit-scrollbar{
 	display: grid;
 	grid-auto-flow: row;
 	grid-template-columns: repeat(3,1fr);
+	
 }
 .header-wrapper ul{
 	padding: 0px 0px;
@@ -335,7 +336,7 @@ form h3{
     text-align: center;
 }
 
-form{
+.form{
    background: #fff;
     display: flex;
     flex-direction: column;
@@ -643,6 +644,84 @@ Display: Flex;
 			right: 0;
 		  }
 
+/* <-------------------------checkout page ------------------------------> */
+.checkout-container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	margin: 30px;
+	padding: 10px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	background-color: rgba(121, 114, 111, 0.47);
+	border-radius: 10px;
+}
+.cart-items{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	border-radius: 8px;
+	background-color: #999999;
+	color: #Eaeff4;
+	width: 300px;
+	height: 300px;
+	padding: 15px;
+}
+.cart-items > h2, h3{
+	display: flex;
+	
+}
+.checkout-form{
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	align-items: center;
+	background-color: #999999;
+	color: #Eaeff4;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	padding: 15px;
+	border-radius: 15px;
+	width: 500px;
+}
+.checkout-form input{
+	padding: 10px !important;
+	width: 300px;
+	border-radius: 10px;
+	font-size: 15px;
+}
+.checkout-form > button {
+	background-color: rgb(19, 220, 220);
+	color: #fff;
+	border-radius: 10px;
+}
+.checkout-form > button:hover{
+	background-color: green;
+}
+.form-details{
+	display: flex;
+	flex-direction: column;
+}
+.b-cart{
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.b-cart > button{
+	padding: 20px;
+	font-size: 20px;
+	border: 0;
+	outline: none;
+	border-radius: 5px;
+	background-color: #1e1e1e;
+	color: #fff;
+}
+.b-cart > button:hover{
+	background-color: #313131;
+}
 /*---------------------------Animations-----------------------------------*/
 .highlited-section-wrapper{
 	overflow: hidden;

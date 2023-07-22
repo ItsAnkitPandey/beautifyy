@@ -3,7 +3,8 @@ import '../App.css';
 import { motion } from 'framer-motion';
 
 
-const Products = ({id, img, name, price, addToCart, curItem}) => {
+const Products = ({addToCart, curItem}) => {
+  const { id, name, img, price } = curItem;
   return (
     
          <figure>

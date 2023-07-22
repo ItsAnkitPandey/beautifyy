@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import FrontBanner from '../img/frontBanner.webp'
 import FrontBanner2 from '../img/frontBanner2.webp'
 import Category1 from '../img/category1.webp'
@@ -11,14 +11,11 @@ import Products from './Products'
 import { items } from './Items'
 
 
-const Home = ({addToCart}) => {
-	// const [item, setItem] = useState(items);
-
-  
-
+const Home = ({ addToCart, count  } ) => {
     return (
         <div >
-            <Navbar />
+            {/* <Navbar count={count}/> */}
+            
             {/* <!-- Banner Wrapper--> */}
             <div className="banner-wrapper">
                 <img src={FrontBanner} alt="Banner Image" />
@@ -77,13 +74,14 @@ const Home = ({addToCart}) => {
                         product category.</p>
                     <div className="product-wrapper">
                     {items.map((curItem)=> {
-						return <Products key={curItem.id} {...curItem} addToCart={addToCart} curItem={curItem} />
+						return <Products key={curItem.id} {...curItem}
+                         addToCart={addToCart} 
+                         curItem={curItem}  />
 					})}
                     </div>
                 </div>
 
             </div>
-            <Footer />
         </div>
     )
 }

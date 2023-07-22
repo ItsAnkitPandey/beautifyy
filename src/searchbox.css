@@ -1,0 +1,22 @@
+form .text{
+    border: 0;
+    margin: 10px;
+    padding: 10px !important;
+    background: #f5f5f5;
+}
+form .button{
+    padding: 10px;
+    background: #21d4fd;
+    color: whitesmoke;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor:pointer;
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 15px;
+}
+.search-box{
+	width: 400px;
+	height: 70px;	
+}

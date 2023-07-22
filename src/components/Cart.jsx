@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../App.css'
 import CartItem from './CartItem'
-import Navbar from './Navbar'
-import { items } from './Items'
-import Footer from './Footer'
 import { motion } from 'framer-motion'
 import TotalPrice from './TotalPrice'
+import { useNavigate } from 'react-router'
 
-const Cart = ({cart}) => {
-	// const [item, setItem] = useState([]);
+const Cart = ({ cart, setCart }) => {
+	const navigate = useNavigate();
+	const handleCheckout = ()=>{
+		navigate("/checkout")
+	}
 	return (
 		<div >
-			<Navbar />
 			<div className="product-container">
 				<div className="product-header">
 					<h5 className="product-title">PRODUCT</h5>
@@ -19,16 +19,18 @@ const Cart = ({cart}) => {
 					<h5 className="quantity">QUANTITY</h5>
 					<h5 className="total">TOTAL</h5>
 				</div>
-				<div className="products">
-					{cart.map((curItem) => {
-						return <CartItem key={curItem.id} {...curItem}  />
-					})}
-				</div>
-				<TotalPrice />	
-				
-				<motion.button whileTap={{ scale: 0.75 }} className="proceed" >Proceed To Checkout</motion.button>
+				{cart.length === 0 ? (<h3>Cart is Empty</h3>) : (
+					<>
+						<div className="products">
+							{cart.map((curItem) => {
+								return <CartItem key={curItem.id} {...curItem} cart={cart} setCart={setCart} />
+							})}
+						</div>
+						<TotalPrice cart={cart} />
+						<motion.button whileTap={{ scale: 0.75 }} className="proceed" onClick={handleCheckout} >Proceed To Checkout</motion.button>
+					</>
+				)}
 			</div>
-			<Footer />
 		</div>
 	)
 }
