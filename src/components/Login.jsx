@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 const Login = () => {
     const navigate = useNavigate();
     const [login, setLogin] = useState(false);
@@ -19,7 +20,7 @@ const Login = () => {
                         <div className="Login-Text">
                             <h2>Welcome!</h2>
                             <p>Create Your Beautify Account.<br/>For Free!</p>
-                            <p Href="" className="Btn">Sign Up</p>
+                            <Link to="" className="Btn">Sign Up</Link>
                         </div>
                     </div>
 
