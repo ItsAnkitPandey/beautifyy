@@ -17,9 +17,6 @@ export const items =  [
         img: require('../img/product2.webp')
     },
     {
-
-
-
         id: 3,
         name:'Bakuchiol',
         tag: 'product3',

@@ -5,13 +5,11 @@ import Category1 from '../img/category1.webp'
 import Category2 from '../img/category2.webp'
 import Category3 from '../img/category3.webp'
 import Category4 from '../img/category4.webp'
-import Navbar from './Navbar'
-import Footer from './Footer'
 import Products from './Products'
 import { items } from './Items'
 
 
-const Home = ({ addToCart, count  } ) => {
+const Home = ({ addToCart } ) => {
     return (
         <div >
             {/* <Navbar count={count}/> */}
