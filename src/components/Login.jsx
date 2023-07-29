@@ -40,7 +40,7 @@ const Login = () => {
                                     <input Type="Submit" value="Sign In" />
                                 </p>
                                 <p>
-                                    <a href="">Forgot Password?</a>
+                                    <Link to="">Forgot Password?</Link>
                                 </p>
 
                             </form>
