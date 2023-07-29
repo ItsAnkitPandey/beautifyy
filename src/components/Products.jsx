@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 
 const Products = ({addToCart, curItem}) => {
-  const { id, name, img, price } = curItem;
+  const {  name, img, price } = curItem;
   return (
     
          <figure>

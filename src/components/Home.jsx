@@ -16,7 +16,7 @@ const Home = ({ addToCart } ) => {
             
             {/* <!-- Banner Wrapper--> */}
             <div className="banner-wrapper">
-                <img src={FrontBanner} alt="Banner Image" />
+                <img src={FrontBanner} alt="Banner " />
                 <span>Luxury Cosmetic and<br />Beauty Products</span>
                 <a href="#featured"><button>Shop Now</button></a>
             </div>
@@ -28,33 +28,33 @@ const Home = ({ addToCart } ) => {
                     product category.</p>
 
                 <div className="cat-wrapper">
-                    <a href="#">
+                    <Link to=' '>
                         <figure>
                             <img src={Category1} alt="Product 1" />
                             <figcaption>Skin Care</figcaption>
                         </figure>
-                    </a>
+                    </Link>
 
-                    <a href="#">
+                    <Link to=' '>
                         <figure>
                             <img src={Category2} alt="Product 2" />
                             <figcaption>Skin Care</figcaption>
                         </figure>
-                    </a>
+                    </Link>
 
-                    <a href="#">
+                    <Link to=' '>
                         <figure>
                             <img src={Category3} alt="Product 3" />
                             <figcaption>Skin Care</figcaption>
                         </figure>
-                    </a>
+                    </Link>
 
-                    <a href="#">
+                    <Link to=' '>
                         <figure>
                             <img src={Category4} alt="Product 4" />
                             <figcaption>Skin Care</figcaption>
                         </figure>
-                    </a>
+                    </Link>
 
                 </div>
 

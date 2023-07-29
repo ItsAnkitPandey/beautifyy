@@ -1,8 +1,5 @@
 import React,{useState} from 'react'
-import { Navigate } from 'react-router';
-import Footer from './Footer'
 import { useNavigate } from 'react-router';
-import Popup from './Popup';
 const Login = () => {
     const navigate = useNavigate();
     const [login, setLogin] = useState(false);

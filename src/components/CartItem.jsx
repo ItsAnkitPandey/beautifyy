@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 const CartItem = ({ name, img, inCart, price, id, cart, setCart }) => {
   const handleRemove = () => {
@@ -32,7 +32,7 @@ const CartItem = ({ name, img, inCart, price, id, cart, setCart }) => {
     <>
       <div className="product">
         <ion-icon name="close-circle" onClick={handleRemove}></ion-icon>
-        <img className="cart-img" src={img} />
+        <img className="cart-img" src={img} alt='cart' />
         <span className='product_name'>{name}</span>
       </div>
       <div className="price">${price}</div>

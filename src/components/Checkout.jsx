@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Footer from './Footer';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 const Checkout = ({ cart }) => {
