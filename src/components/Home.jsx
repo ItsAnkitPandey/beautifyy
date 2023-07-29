@@ -7,6 +7,7 @@ import Category3 from '../img/category3.webp'
 import Category4 from '../img/category4.webp'
 import Products from './Products'
 import { items } from './Items'
+import {Link} from 'react-router-dom'
 
 
 const Home = ({ addToCart } ) => {
